@@ -42,10 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->SMTPSecure = 'tls';
       $mail->Port       = 587;
 
-      $mail->setFrom($_POST['email'], $_POST['name']);
-      $mail->addAddress('mertsozen77@gmail.com'); // This is the recipient's email address
+      // Sender, Recipient, and Content 
+      $mail->setFrom('info@yktechnics.com', 'Mert');
+      $mail->addAddress('mertcode0@gmail.com');
       $mail->isHTML(true);
-      $mail->Subject = 'Aanvraag Offerte via Website';
+      $mail->Subject = 'Aanvraag offerte';
 
       // Build message body
       $message = "Naam: $name<br>";

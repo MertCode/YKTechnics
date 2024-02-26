@@ -3,7 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -32,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->isSMTP();
       $mail->Host       = 'send.one.com';
       $mail->SMTPAuth   = true;
-      $mail->Username   = 'info@yktechnics.com';
-      $mail->Password   = 'YKtechnics!1962';
+      $mail->Username   = getenv('SMTP_USERNAME');
+      $mail->Password   = getenv('SMTP_PASSWORD');
       $mail->SMTPSecure = 'tls';
       $mail->Port       = 587;
 

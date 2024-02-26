@@ -212,24 +212,27 @@
                       </div>
                       <div class="form-wrap">
                         <label class="form-label" for="contact-phone1"
-                          >Telefoon</label
+                          >GSM</label
                         >
                         <input
                           class="form-input"
                           id="contact-phone1"
                           type="text"
                           name="phone"
-                          data-constraints="@Numeric @Required"
+                          data-constraints="@Required"
                         />
                       </div>
                       <div class="form-wrap">
                         <select
                           class="form-input select-filter"
                           name="installation_type"
-                          data-placeholder="Type installatie die u nodig heeft"
+                          data-placeholder="Voor welke dienst heeft u een offerte nodig?"
                           data-minimum-results-for-search="Infinity"
                           data-constraints="@Required"
                         >
+                          <option>
+                            Voor welke dienst heeft u een offerte nodig?
+                          </option>
                           <option value="Zonnepanelen">Zonnepanelen</option>
                           <option value="Laadpalen">Laadpalen</option>
                           <option value="Elektriciteitswerken">
@@ -241,14 +244,11 @@
                         <select
                           class="form-input select-filter"
                           name="contact_preference"
-                          data-placeholder="Op welke manier prefereert u dat er contact met u wordt opgenomen?"
+                          data-placeholder="Contact voorkeur"
                           data-minimum-results-for-search="Infinity"
                           data-constraints="@Required"
                         >
-                          <option>
-                            Op welke manier prefereert u dat er contact met u
-                            wordt opgenomen?
-                          </option>
+                          <option>Contact voorkeur</option>
                           <option value="GSM">GSM</option>
                           <option value="Email">E-mail</option>
                         </select>
@@ -756,8 +756,11 @@
                       productiegarantie zonder extra kosten.
                     </h3>
                   </div>
-                  <a class="btn btn-primary offset-top-35" href="#"
-                    >ONTVANG OFFERTE</a
+                  <a
+                    href="offerte.html"
+                    class="btn btn-primary offset-top-35"
+                    href="#"
+                    >GRATIS OFFERTE</a
                   >
                 </div>
               </div>
@@ -918,8 +921,8 @@
                   <a
                     id="toegewijd"
                     class="btn btn-primary btn-shadow offset-top-35 offset-sm-top-65"
-                    href="#"
-                    >ONTVANG EEN OFFERTE</a
+                    href="offerte.html"
+                    >Vraag offerte</a
                   >
                 </div>
               </div>
@@ -932,7 +935,7 @@
 
       <section class="section-top-75 section-md-top-135" id="contacts">
         <div class="container">
-          <h3>Contact Us</h3>
+          <h3>Contacteer Ons</h3>
           <hr class="hr offset-top-35" />
           <div
             class="row row-50 justify-content-sm-center offset-top-0 features-list-variant-2 section-top-70 section-bottom-80"
@@ -988,10 +991,14 @@
                     <!--Select 2-->
                     <select
                       class="form-input select-filter"
-                      data-placeholder="Type installatie die u nodig heeft"
+                      name="installation_type"
+                      data-placeholder="Voor welke dienst heeft u een offerte nodig?"
                       data-minimum-results-for-search="Infinity"
                       data-constraints="@Required"
                     >
+                      <option>
+                        Voor welke dienst heeft u een offerte nodig?
+                      </option>
                       <option value="Zonnepanelen">Zonnepanelen</option>
                       <option value="Laadpalen">Laadpalen</option>
                       <option value="Elektriciteitswerken">
@@ -1004,13 +1011,14 @@
                     <select
                       aria-placeholder="Contact voorkeur?"
                       class="form-input select-filter"
-                      data-placeholder="Contact voorkeur?"
+                      data-placeholder="Contact voorkeur"
                       data-minimum-results-for-search="Infinity"
                       datanstraints="@Required"
+                      name="contact_preference"
                     >
-                      <option>Contact voorkeur?</option>
-                      <option value="2">GSM</option>
-                      <option value="3">E-mail</option>
+                      <option>Contact voorkeur</option>
+                      <option value="GSM">GSM</option>
+                      <option value="Email">E-mail</option>
                     </select>
                   </div>
 

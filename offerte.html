@@ -178,10 +178,14 @@
                     <!--Select 2-->
                     <select
                       class="form-input select-filter"
-                      data-placeholder="Type installatie die u nodig heeft"
+                      name="installation_type"
+                      data-placeholder="Voor welke dienst heeft u een offerte nodig?"
                       data-minimum-results-for-search="Infinity"
                       data-constraints="@Required"
                     >
+                      <option>
+                        Voor welke dienst heeft u een offerte nodig?
+                      </option>
                       <option value="Zonnepanelen">Zonnepanelen</option>
                       <option value="Laadpalen">Laadpalen</option>
                       <option value="Elektriciteitswerken">
@@ -197,10 +201,11 @@
                       data-placeholder="Contact voorkeur?"
                       data-minimum-results-for-search="Infinity"
                       datanstraints="@Required"
+                      name="contact_preference"
                     >
-                      <option>Contact voorkeur?</option>
-                      <option value="2">GSM</option>
-                      <option value="3">E-mail</option>
+                      <option>Contact voorkeur</option>
+                      <option value="GSM">GSM</option>
+                      <option value="Email">E-mail</option>
                     </select>
                   </div>
 
@@ -260,8 +265,8 @@
                 <div class="footer-widget-content" style="margin-top: 5px">
                   <nav>
                     <ul class="list-unstyled">
-                      <li><a href="about-us.html">Over Ons</a></li>
-                      <li><a href="projects-grid.html">Onze Projecten</a></li>
+                      <li><a href="#">Over Ons</a></li>
+                      <li><a href="#">Onze Projecten</a></li>
                     </ul>
                   </nav>
                 </div>

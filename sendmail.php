@@ -12,12 +12,12 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $name = htmlspecialchars($_POST['name']);
+   $name = $_POST['name'];
    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-   $phone = htmlspecialchars($_POST['phone']);
-   $installation_type = htmlspecialchars($_POST['installation_type']);
-   $contact_preference = htmlspecialchars($_POST['contact_preference']);
-   $additional_info = htmlspecialchars($_POST['additional_info']); // New line to retrieve additional information
+   $phone = $_POST['phone'];
+   $installation_type = $_POST['installation_type'];
+   $contact_preference = $_POST['contact_preference'];
+   $additional_info = $_POST['additional_info']; // No sanitization for additional info
 
    if (empty($name) || empty($email) || empty($phone) || empty($installation_type) || empty($contact_preference)) {
       echo "Please fill out all required fields.";
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->Port       = 587;
 
       $mail->setFrom('info@yktechnics.com', 'YK Technics');
-      $mail->addAddress('mertcode0@gmail.com');
+      $mail->addAddress('mert.sozen@icloud.com'); // Send to testmail until one fixed
       $mail->isHTML(true);
       $mail->Subject = 'Aanvraag offerte via Website';
 

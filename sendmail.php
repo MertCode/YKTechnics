@@ -35,23 +35,74 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->isSMTP();
       $mail->Host       = 'send.one.com';
       $mail->SMTPAuth   = true;
-      $mail->Username   = getenv('SMTP_USERNAME');
-      $mail->Password   = getenv('SMTP_PASSWORD');
+      $mail->Username   = $_ENV['SMTP_USERNAME'];
+      $mail->Password   = $_ENV['SMTP_PASSWORD'];
       $mail->SMTPSecure = 'tls';
       $mail->Port       = 587;
 
-      $mail->setFrom('info@yktechnics.com', 'Mert');
+      $mail->setFrom('info@yktechnics.com', 'YK Technics');
       $mail->addAddress('mertcode0@gmail.com');
       $mail->isHTML(true);
-      $mail->Subject = 'Aanvraag offerte';
+      $mail->Subject = 'Aanvraag offerte via Website';
 
-      $message = "Naam: $name<br>";
-      $message .= "Email: $email<br>";
-      $message .= "Telefoon: $phone<br>";
-      $message .= "Type installatie: $installation_type<br>";
-      $message .= "Contactvoorkeur: $contact_preference<br>";
-      $message .= "Extra informatie: $additional_info<br>"; // New line to include additional information
+      $message = '<html>
+               <head>
+                  <style>
+                        /* Stijl voor de tabel */
+                        table {
+                           border-collapse: collapse;
+                           width: 100%;
+                        }
+                        
+                        /* Stijl voor de tabelcellen */
+                        th, td {
+                           border: 1px solid #dddddd;
+                           text-align: left;
+                           padding: 8px;
+                        }
+                        
+                        /* Stijl voor de eerste kolom (headers) */
+                        th {
+                           background-color: #f2f2f2;
+                        }
+                  </style>
+               </head>
+               <body>
+                  <h2>Aanvraag Offerte Details</h2>
+                  <table>
+                        <tr>
+                           <th>Onderwerp</th>
+                           <td>Offerte aanvraag</td>
+                        </tr>
+                        <tr>
+                           <th>Naam</th>
+                           <td>' . $name . '</td>
+                        </tr>
+                        <tr>
+                           <th>Email</th>
+                           <td>' . $email . '</td>
+                        </tr>
+                        <tr>
+                           <th>Telefoon</th>
+                           <td>' . $phone . '</td>
+                        </tr>
+                        <tr>
+                           <th>Type installatie</th>
+                           <td>' . $installation_type . '</td>
+                        </tr>
+                        <tr>
+                           <th>Contactvoorkeur</th>
+                           <td>' . $contact_preference . '</td>
+                        </tr>
+                        <tr>
+                           <th>Extra informatie</th>
+                           <td>' . $additional_info . '</td>
+                        </tr>
+                  </table>
+               </body>
+            </html>';
       $mail->Body = $message;
+
 
       $mail->send();
       echo 'Bedankt voor uw aanvraag. We nemen zo spoedig mogelijk contact met u op.';

@@ -91,7 +91,7 @@
                   <div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
                       <!-- RD Navbar Nav-->
-                      <li class="active"><a href="#home">Home</a></li>
+                      <li class="active"><a href="index.html">Home</a></li>
                       <li><a href="#zonnepanelen">Zonnepanelen</a></li>
                       <!-- omvormers -->
 
@@ -219,7 +219,7 @@
                           id="contact-phone1"
                           type="text"
                           name="phone"
-                          data-constraints="@Numeric @Required"
+                          data-constraints="@Required"
                         />
                       </div>
                       <div class="form-wrap">
@@ -230,9 +230,11 @@
                           data-minimum-results-for-search="Infinity"
                           data-constraints="@Required"
                         >
-                          <option value="1">Zonnepanelen</option>
-                          <option value="2">Laadpalen</option>
-                          <option value="3">Elektriciteitswerken</option>
+                          <option value="Zonnepanelen">Zonnepanelen</option>
+                          <option value="Laadpalen">Laadpalen</option>
+                          <option value="Elektriciteitswerken">
+                            Elektriciteitswerken
+                          </option>
                         </select>
                       </div>
                       <div class="form-wrap">
@@ -248,7 +250,7 @@
                             wordt opgenomen?
                           </option>
                           <option value="GSM">GSM</option>
-                          <option value="E-mail">E-mail</option>
+                          <option value="Email">E-mail</option>
                         </select>
                       </div>
                       <div class="form-wrap">

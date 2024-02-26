@@ -226,16 +226,14 @@
                         <select
                           class="form-input select-filter"
                           name="installation_type"
-                          data-placeholder="Heb je een residentieel of commercieel systeem nodig?"
+                          data-placeholder="Type installatie die u nodig heeft"
                           data-minimum-results-for-search="Infinity"
                           data-constraints="@Required"
                         >
-                          <option>Type installatie die u nodig heeft</option>
-                          <option value="2">
-                            Installatie voor een huis of woning
-                          </option>
-                          <option value="3">
-                            Installatie voor commerciële gebouwen of bedrijven
+                          <option value="Zonnepanelen">Zonnepanelen</option>
+                          <option value="Laadpalen">Laadpalen</option>
+                          <option value="Elektriciteitswerken">
+                            Elektriciteitswerken
                           </option>
                         </select>
                       </div>
@@ -251,9 +249,19 @@
                             Op welke manier prefereert u dat er contact met u
                             wordt opgenomen?
                           </option>
-                          <option value="2">GSM</option>
-                          <option value="3">E-mail</option>
+                          <option value="GSM">GSM</option>
+                          <option value="Email">E-mail</option>
                         </select>
+                      </div>
+                      <div class="form-wrap">
+                        <label class="form-label" for="additional-info"
+                          >Extra informatie</label
+                        >
+                        <textarea
+                          class="form-input"
+                          id="additional-info"
+                          name="additional_info"
+                        ></textarea>
                       </div>
                       <button
                         class="btn btn-primary offset-top-30"
@@ -940,9 +948,9 @@
                   data-form-output="form-output-global"
                   data-form-type="contact"
                   method="post"
-                  action="bat/rd-mailform.php"
+                  action="sendmail.php"
                 >
-                  <div class="form-wrap" id="form2">
+                  <div class="form-wrap">
                     <label class="form-label" for="contact-name1">Naam</label>
                     <input
                       class="form-input"
@@ -975,46 +983,48 @@
                     />
                   </div>
                   <div class="form-wrap">
-                    <!--Select 2-->
                     <select
                       class="form-input select-filter"
-                      data-placeholder="Heb je een residentieel of commercieel systeem nodig?"
+                      name="installation_type"
+                      data-placeholder="Type installatie die u nodig heeft"
                       data-minimum-results-for-search="Infinity"
                       data-constraints="@Required"
                     >
-                      <option>Type installatie die u nodig heeft</option>
-                      <option value="2">
-                        Installatie voor een huis of woning
-                      </option>
-                      <option value="3">
-                        Installatie voor commerciële gebouwen of bedrijven
+                      <option value="Zonnepanelen">Zonnepanelen</option>
+                      <option value="Laadpalen">Laadpalen</option>
+                      <option value="Elektriciteitswerken">
+                        Elektriciteitswerken
                       </option>
                     </select>
                   </div>
                   <div class="form-wrap">
-                    <!--Select 2-->
                     <select
                       class="form-input select-filter"
+                      name="contact_preference"
                       data-placeholder="Op welke manier prefereert u dat er contact met u wordt opgenomen?"
                       data-minimum-results-for-search="Infinity"
                       data-constraints="@Required"
-                      placeholder="Op welke manier prefereert u dat er contact met u
-                            wordt opgenomen?"
                     >
                       <option>
                         Op welke manier prefereert u dat er contact met u wordt
                         opgenomen?
                       </option>
-                      <option value="2">GSM</option>
-                      <option value="3">E-mail</option>
+                      <option value="GSM">GSM</option>
+                      <option value="Email">E-mail</option>
                     </select>
                   </div>
-                  <button
-                    id="form-submit2"
-                    class="btn btn-primary offset-top-30"
-                    type="submit"
-                  >
-                    KRIJG EEN OFFERTE
+                  <div class="form-wrap">
+                    <label class="form-label" for="additional-info"
+                      >Extra informatie</label
+                    >
+                    <textarea
+                      class="form-input"
+                      id="additional-info"
+                      name="additional_info"
+                    ></textarea>
+                  </div>
+                  <button class="btn btn-primary offset-top-30" type="submit">
+                    Vraag een offerte aan
                   </button>
                 </form>
               </div>

@@ -19,7 +19,6 @@
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       ),
-    windowReady = false,
     isNoviBuilder = false,
     plugins = {
       pointerEvents: isIE < 11 ? "js/pointer-events.min.js" : false,
@@ -77,7 +76,6 @@
         },
         onReady: function () {
           plugins.preloader.addClass("loaded");
-          windowReady = true;
         },
       });
     }
@@ -572,7 +570,7 @@
           MF003: "Please, define email field in your form!",
           MF004: "Please, define type of your form!",
           MF254: "Something went wrong with PHPMailer!",
-          MF255: "Aw, snap! Something went wrong.",
+          MF255: "Offerte aanvraag verstuurd.",
         };
 
       for (i = 0; i < plugins.rdMailForm.length; i++) {
@@ -806,7 +804,7 @@
               },
             ],
           })
-          .on("afterChange", function (event, slick, currentSlide) {
+          .on("afterChange", function (_event, _slick, currentSlide) {
             var $this = $(this),
               childCarousel = $this.attr("data-child");
 

@@ -32,7 +32,7 @@
     <!-- Page-->
     <div class="page text-center">
       <!-- Page Header-->
-      <header class="page-head header-transparent" id="home">
+      <header class="page-head bg-default1 header-transparent" id="home">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap">
           <nav
@@ -59,7 +59,7 @@
             >
               <span></span>
             </button>
-            <div class="bg-default">
+            <div class="bg-default1">
               <div class="rd-navbar-inner">
                 <!-- RD Navbar Panel-->
                 <div class="rd-navbar-panel">
@@ -76,7 +76,7 @@
                       ><img
                         class="brand"
                         src="images/logo homepage white.png"
-                        width="250px"
+                        width="200px"
                         height="150px"
                         alt="" /><img
                         class="stuck-brand"
@@ -106,7 +106,8 @@
                 <div class="rd-navbar-panel-inner">
                   <div>
                     <a
-                      class="btn btn-transparent btn-icon btn-icon-left"
+                      style="color: white"
+                      class="btn btn-transparent1 btn-icon btn-icon-left"
                       href="tel:#"
                       ><span class="icon fa-phone text-primary"></span
                       ><span class="text-middle">+32493333160</span></a
@@ -120,169 +121,108 @@
       </header>
 
       <!-- Welcome-->
-      <section>
-        <!-- Swiper-->
-        <div
-          class="swiper-container swiper-slider"
-          data-swiper='{"autoplay":{"delay":35500},"effect":"slide"}'
-        >
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide offertefoto11"
-              data-slide-bg="images/offertefoto1.jpg"
-              style="background-position: 80% center"
-            >
-              <div class="swiper-slide-caption"></div>
+      <section class="section-top-30 section-md-top-135" id="contacts">
+        <div class="container">
+          <hr class="hr offset-top-35" />
+          <div
+            class="row row-50 justify-content-sm-center offset-top-0 features-list-variant-2 section-top-70 section-bottom-80"
+          >
+            <div class="col-sm-8 col-md-10 col-xl-6 row-30">
+              <img src="images/contactpic.png" style="width: 55%" alt="" />
             </div>
-          </div>
-          <div class="jumbotron-custom">
-            <div class="container">
-              <div
-                class="row justify-content-sm-center justify-content-xl-between align-items-lg-center"
-              >
-                <div class="col-lg-6 text-left col-sm-10">
-                  <div>
-                    <h1>
-                      <span
-                        class="text-primary view-animate fadeInUp delay-08 duration-1 animated"
-                        >Gratis </span
-                      ><br /><span
-                        class="text-white view-animate fadeInDown delay-08 duration-1 animated"
-                      >
-                        Offerte</span
-                      >
-                    </h1>
-                  </div>
-                  <div
-                    class="offset-top-20 view-animate fadeInUpSmall delay-16 duration-1"
-                  >
-                    <p
-                      class="h6 text-white font-default text-light text-transform-none"
-                      style="max-width: 480px"
-                    >
-                      Vraag vandaag nog een gratis offerte aan voor
-                      zonnepanelen, laadpalen en elektriciteitswerken! Laat ons
-                      weten welke services u nodig heeft en voor welke locatie,
-                      en we stellen een gedetailleerde prijsopgave op, helemaal
-                      gratis. Neem contact met ons op om uw offerte aan te
-                      vragen en ontdek hoe wij u kunnen helpen met uw
-                      energiebehoeften.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-6 col-sm-10 col-xl-5 form-container formofferte"
+            <div class="col-md-10 col-xl-6">
+              <div class="inset-lg-left-110">
+                <h5>
+                  Ontvang vandaag nog een gratis vrijblijvende offerte voor onze
+                  uitgebreide diensten.
+                </h5>
+                <!-- RD Mailform-->
+                <form
+                  class="rd-mailform text-center offset-top-30"
+                  data-form-output="form-output-global"
+                  data-form-type="contact"
+                  method="post"
+                  action="sendmail.php"
                 >
-                  <div class="bg-default formmobile section-form-slider">
-                    <h5>
-                      Ontdek hoe u kunt besparen op uw energierekeningen met
-                      onze diensten!
-                    </h5>
-                    <!-- RD Mailform-->
-                    <form
-                      class="rd-mailform text-center offset-top-30"
-                      data-form-output="form-output-global"
-                      data-form-type="contact"
-                      method="post"
-                      action="sendmail.php"
-                    >
-                      <div class="form-wrap">
-                        <label class="form-label" for="contact-name1"
-                          >Naam</label
-                        >
-                        <input
-                          class="form-input"
-                          id="contact-name1"
-                          type="text"
-                          name="name"
-                          data-constraints="@Required"
-                        />
-                      </div>
-                      <div class="form-wrap">
-                        <label class="form-label" for="contact-email1"
-                          >Email</label
-                        >
-                        <input
-                          class="form-input"
-                          id="contact-email1"
-                          type="email"
-                          name="email"
-                          data-constraints="@Email @Required"
-                        />
-                      </div>
-                      <div class="form-wrap">
-                        <label class="form-label" for="contact-phone1"
-                          >Telefoon</label
-                        >
-                        <input
-                          class="form-input"
-                          id="contact-phone1"
-                          type="text"
-                          name="phone"
-                          data-constraints="@Required"
-                        />
-                      </div>
-                      <div class="form-wrap">
-                        <select
-                          class="form-input select-filter"
-                          name="installation_type"
-                          data-placeholder="Type installatie die u nodig heeft"
-                          data-minimum-results-for-search="Infinity"
-                          data-constraints="@Required"
-                        >
-                          <option value="Zonnepanelen">Zonnepanelen</option>
-                          <option value="Laadpalen">Laadpalen</option>
-                          <option value="Elektriciteitswerken">
-                            Elektriciteitswerken
-                          </option>
-                        </select>
-                      </div>
-                      <div class="form-wrap">
-                        <select
-                          class="form-input select-filter"
-                          name="contact_preference"
-                          data-placeholder="Op welke manier prefereert u dat er contact met u wordt opgenomen?"
-                          data-minimum-results-for-search="Infinity"
-                          data-constraints="@Required"
-                        >
-                          <option>
-                            Op welke manier prefereert u dat er contact met u
-                            wordt opgenomen?
-                          </option>
-                          <option value="GSM">GSM</option>
-                          <option value="Email">E-mail</option>
-                        </select>
-                      </div>
-                      <div class="form-wrap">
-                        <label class="form-label" for="additional-info"
-                          >Extra informatie</label
-                        >
-                        <textarea
-                          class="form-input"
-                          id="additional-info"
-                          name="additional_info"
-                        ></textarea>
-                      </div>
-                      <button
-                        class="btn btn-primary offset-top-30"
-                        type="submit"
-                      >
-                        Vraag een offerte aan
-                      </button>
-                    </form>
+                  <div class="form-wrap">
+                    <label class="form-label" for="contact-name">Naam</label>
+                    <input
+                      class="form-input"
+                      id="contact-name"
+                      type="text"
+                      name="name"
+                      data-constraints="@Required"
+                    />
                   </div>
-                </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="contact-email">Email</label>
+                    <input
+                      class="form-input"
+                      id="contact-email"
+                      type="email"
+                      name="email"
+                      data-constraints="@Email @Required"
+                    />
+                  </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="contact-phone">GSM</label>
+                    <input
+                      class="form-input"
+                      id="contact-phone"
+                      type="text"
+                      name="phone"
+                      data-constraints="@Required"
+                    />
+                  </div>
+                  <div class="form-wrap">
+                    <!--Select 2-->
+                    <select
+                      class="form-input select-filter"
+                      data-placeholder="Type installatie die u nodig heeft"
+                      data-minimum-results-for-search="Infinity"
+                      data-constraints="@Required"
+                    >
+                      <option value="Zonnepanelen">Zonnepanelen</option>
+                      <option value="Laadpalen">Laadpalen</option>
+                      <option value="Elektriciteitswerken">
+                        Elektriciteitswerken
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-wrap">
+                    <!--Select 2-->
+                    <select
+                      aria-placeholder="Contact voorkeur?"
+                      class="form-input select-filter"
+                      data-placeholder="Contact voorkeur?"
+                      data-minimum-results-for-search="Infinity"
+                      datanstraints="@Required"
+                    >
+                      <option>Contact voorkeur?</option>
+                      <option value="2">GSM</option>
+                      <option value="3">E-mail</option>
+                    </select>
+                  </div>
+
+                  <div class="form-wrap">
+                    <label class="form-label" for="additional-info"
+                      >Extra informatie</label
+                    >
+                    <textarea
+                      class="form-input"
+                      id="additional-info"
+                      name="additional_info"
+                    ></textarea>
+                  </div>
+                  <button class="btn btn-primary offset-top-30" type="submit">
+                    Offerte aanvragen
+                  </button>
+                </form>
               </div>
             </div>
           </div>
-          <!-- Swiper Pagination-->
-          <div class="swiper-pagination"></div>
         </div>
       </section>
-
-      <div class="container">
-        <hr class="hr" />
-      </div>
 
       <!-- ========================
       Footer

@@ -10886,6 +10886,13 @@ fieldset[disabled] .header-transparent .rd-navbar-fixed .btn-transparent {
   border-color: transparent;
 }
 
+.header-transparent1 .rd-navbar-static.rd-navbar--is-stuck1 .btn-transparent1,
+.header-transparent1 .rd-navbar-fullwidth.rd-navbar--is-stuck1 .btn-transparent1 {
+  color: #ff0000;
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .header-transparent
   .rd-navbar-static.rd-navbar--is-stuck
   .btn-transparent:focus,
@@ -14289,4 +14296,19 @@ h4 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+.form-input:focus::placeholder {
+  color: transparent;
+}
+
+.form-input:not(:focus):not(:placeholder-shown)::placeholder {
+  color: #999; /* Adjust placeholder color as needed */
+}
+/* .headerpic {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/220px-Black_flag.svg.png");
+  background-size: cover;
+} */
+.bg-default1 {
+  background-color: #000 !important;
 }

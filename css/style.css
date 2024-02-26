@@ -12620,8 +12620,8 @@ ol ol {
 
 .select2-container--bootstrap
   .select2-results__option--highlighted[aria-selected] {
-  background-color: #ff2800;
-  color: #333;
+  background-color: #cccccc;
+  color: #000000;
 }
 
 .select2-container--bootstrap
@@ -12700,7 +12700,7 @@ ol ol {
 .select2-container--bootstrap.select2-container--focus .select2-selection,
 .select2-container--bootstrap.select2-container--open .select2-selection {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  border-color: #ff2800;
+  border-color: #000000;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12714,7 +12714,7 @@ ol ol {
   .select2-selection
   .select2-selection__arrow
   b {
-  border-color: transparent transparent #ff2800 transparent;
+  border-color: transparent transparent #000000 transparent;
   border-width: 0 5px 5px 5px;
 }
 
@@ -12739,7 +12739,7 @@ ol ol {
 }
 
 .select2-container--bootstrap .select2-selection__clear:hover {
-  color: #ff2800;
+  color: #000000;
 }
 
 .select2-container--bootstrap.select2-container--disabled .select2-selection {
@@ -12769,7 +12769,7 @@ ol ol {
 }
 
 .select2-container--bootstrap .select2-dropdown {
-  border-color: #ff2800;
+  border-color: #000000;
   overflow-x: hidden;
 }
 

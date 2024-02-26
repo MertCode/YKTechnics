@@ -13842,7 +13842,7 @@ ol ol {
   display: inline-block;
   border-radius: 100%;
   background: #fff;
-  opacity: 0.5;
+  opacity: 1;
   transition: 250ms;
 }
 
@@ -13888,9 +13888,8 @@ ol ol {
 }
 
 .swiper-container-horizontal > .swiper-pagination {
-  bottom: 20px;
   left: 0;
-  width: 100%;
+  width: 0%;
 }
 
 .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {

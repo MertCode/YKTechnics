@@ -1,25 +1,21 @@
 <?php
-// Include PHPMailer classes at the top 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Load Composer's autoloader
 require_once 'vendor/autoload.php';
 
-// Display errors for debugging (remove in production) 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   // Form Data and Validation
    $name = htmlspecialchars($_POST['name']);
    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
    $phone = htmlspecialchars($_POST['phone']);
    $installation_type = htmlspecialchars($_POST['installation_type']);
    $contact_preference = htmlspecialchars($_POST['contact_preference']);
+   $additional_info = htmlspecialchars($_POST['additional_info']); // New line to retrieve additional information
 
-   // Basic validation
    if (empty($name) || empty($email) || empty($phone) || empty($installation_type) || empty($contact_preference)) {
       echo "Please fill out all required fields.";
       exit;
@@ -30,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
    }
 
-   // SMTP Configuration (Replace with your mail service details)
    $mail = new PHPMailer(true);
 
    try {
@@ -42,21 +37,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->SMTPSecure = 'tls';
       $mail->Port       = 587;
 
-      // Sender, Recipient, and Content 
       $mail->setFrom('info@yktechnics.com', 'Mert');
       $mail->addAddress('mertcode0@gmail.com');
       $mail->isHTML(true);
       $mail->Subject = 'Aanvraag offerte';
 
-      // Build message body
       $message = "Naam: $name<br>";
       $message .= "Email: $email<br>";
       $message .= "Telefoon: $phone<br>";
       $message .= "Type installatie: $installation_type<br>";
       $message .= "Contactvoorkeur: $contact_preference<br>";
+      $message .= "Extra informatie: $additional_info<br>"; // New line to include additional information
       $mail->Body = $message;
 
-      // Send the email
       $mail->send();
       echo 'Bedankt voor uw aanvraag. We nemen zo spoedig mogelijk contact met u op.';
    } catch (Exception $e) {

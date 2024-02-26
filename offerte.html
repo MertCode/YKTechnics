@@ -170,7 +170,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-6 col-sm-10 col-xl-5 form-container formofferte">
+                <div
+                  class="col-lg-6 col-sm-10 col-xl-5 form-container formofferte"
+                >
                   <div class="bg-default formmobile section-form-slider">
                     <h5>
                       Ontdek hoe u kunt besparen op uw energierekeningen met
@@ -224,17 +226,13 @@
                         <select
                           class="form-input select-filter"
                           name="installation_type"
-                          data-placeholder="Heb je een residentieel of commercieel systeem nodig?"
+                          data-placeholder="Type installatie die u nodig heeft"
                           data-minimum-results-for-search="Infinity"
                           data-constraints="@Required"
                         >
-                          <option>Type installatie die u nodig heeft</option>
-                          <option value="2">
-                            Installatie voor een huis of woning
-                          </option>
-                          <option value="3">
-                            Installatie voor commerciële gebouwen of bedrijven
-                          </option>
+                          <option value="1">Zonnepanelen</option>
+                          <option value="2">Laadpalen</option>
+                          <option value="3">Elektriciteitswerken</option>
                         </select>
                       </div>
                       <div class="form-wrap">
@@ -249,9 +247,20 @@
                             Op welke manier prefereert u dat er contact met u
                             wordt opgenomen?
                           </option>
-                          <option value="2">GSM</option>
-                          <option value="3">E-mail</option>
+                          <option value="GSM">GSM</option>
+                          <option value="E-mail">E-mail</option>
                         </select>
+                      </div>
+                      <div class="form-wrap">
+                        <label class="form-label" for="additional-info"
+                          >Extra informatie</label
+                        >
+                        <textarea
+                          class="form-input"
+                          id="additional-info"
+                          name="additional_info"
+                          data-constraints="@Required"
+                        ></textarea>
                       </div>
                       <button
                         class="btn btn-primary offset-top-30"

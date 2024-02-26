@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->Port       = 587;
 
       $mail->setFrom('info@yktechnics.com', 'YK Technics');
-      $mail->addAddress('mert.sozen@icloud.com'); // Send to testmail until one fixed
+      $mail->addAddress('offerte@yktechnics.com'); // Send to testmail until one fixed
       $mail->isHTML(true);
       $mail->Subject = 'Aanvraag offerte via Website';
 

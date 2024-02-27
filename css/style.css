@@ -10887,7 +10887,9 @@ fieldset[disabled] .header-transparent .rd-navbar-fixed .btn-transparent {
 }
 
 .header-transparent1 .rd-navbar-static.rd-navbar--is-stuck1 .btn-transparent1,
-.header-transparent1 .rd-navbar-fullwidth.rd-navbar--is-stuck1 .btn-transparent1 {
+.header-transparent1
+  .rd-navbar-fullwidth.rd-navbar--is-stuck1
+  .btn-transparent1 {
   color: #ff0000;
   background-color: transparent;
   border-color: transparent;
@@ -14311,4 +14313,16 @@ h4 {
 } */
 .bg-default1 {
   background-color: #000 !important;
+}
+
+@media (max-width: 1199px) {
+  .section-xl-top-75 {
+    padding-top: 75px; /* Apply padding top on laptop */
+  }
+}
+
+@media (max-width: 767px) {
+  .paddinggsm {
+    padding-top: 0; /* Remove padding top on mobile */
+  }
 }

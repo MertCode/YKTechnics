@@ -12,12 +12,12 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $name = $_POST['name'];
-   $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-   $phone = $_POST['phone'];
-   $installation_type = $_POST['installation_type'];
-   $contact_preference = $_POST['contact_preference'];
-   $additional_info = $_POST['additional_info']; // No sanitization for additional info
+   $name = $_POST['name1'];
+   $email = filter_var($_POST['email1'], FILTER_SANITIZE_EMAIL);
+   $phone = $_POST['phone1'];
+   $installation_type = $_POST['installation_type1'];
+   $contact_preference = $_POST['contact_preference1'];
+   $additional_info = $_POST['additional_info1']; // No sanitization for additional info
 
    if (empty($name) || empty($email) || empty($phone) || empty($installation_type) || empty($contact_preference)) {
       echo "Please fill out all required fields.";
@@ -105,6 +105,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
       $mail->send();
+      var_dump($message);
+
       echo 'Bedankt voor uw aanvraag. We nemen zo spoedig mogelijk contact met u op.';
    } catch (Exception $e) {
       echo "Het versturen van uw aanvraag is mislukt. Probeer het later nog eens. Mailer Error: {$mail->ErrorInfo}";

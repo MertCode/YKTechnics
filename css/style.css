@@ -13682,7 +13682,7 @@ ol ol {
  * @licesne      MIT License
  */
 .swiper-container {
-  height: 84.5vh;
+  height: 100vh !important;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
